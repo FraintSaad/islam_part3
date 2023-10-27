@@ -11,28 +11,25 @@ namespace islam_part3
     {
         public static void Start()
         {
-            
-            string[] cakes = new string[] { "Тортик", "Тортище", "Торт95"};
+            string[] cakes = new string[] { "Тортик", "Тортище", "Торт95" };
             Console.WriteLine($"В наличии есть: {string.Join(", ", cakes)}");
             int[] prices = new int[] { 1507, 3600, 200 };
-            int choice = -1;
+            Dictionary<string, int> cakePrices = new Dictionary<string, int>();
+            for (int i = 0; i < cakes.Length; i++)
             {
-                Console.WriteLine("Выберите торт:");
-                string input = Console.ReadLine();
-                choice = Convert.ToInt32(input) - 1;
+                cakePrices.Add(cakes[i], prices[i]);
             }
-
-
-            if (choice <= 2 && choice >= 0)
-                {
-                    int price = prices[choice];
-                    Console.WriteLine($"Торт: {cakes[choice]}\nЦена: {price}");
-                }
-                else
-                {
-                    Console.WriteLine("Тортиньо яц, нету, досвидания");
-                }
+            Console.WriteLine("Муьлха торт еза?");
+            string ThisCake = Console.ReadLine();
+            if (cakePrices.ContainsKey(ThisCake))
+            {
+                Console.WriteLine($"{ThisCake} {cakePrices[ThisCake]} сом доьхуш ю.");
             }
+            else
+            {
+                Console.WriteLine($"Тортиньо яц, нету, досвидания");
+            }
+        }
         }
     }
 
