@@ -11,15 +11,14 @@ namespace islam_part3
     {
         public static void Start()
         {
-            string[] cakes = new string[] { "Тортик", "Тортище", "Торт95" };
+            string[] cakes = new string[] { "Тортик", "Тортище", "Торт95", "тоРТило"};
             Console.WriteLine($"В наличии есть: {string.Join(", ", cakes)}");
-            int[] prices = new int[] { 1507, 3600, 200 };
+            int[] prices = new int[] { 1507, 3600, 200, 400 };
             Console.WriteLine("Муьлха торт еза?");
             string ThisCake = Console.ReadLine();
             for (int i = 0; i < cakes.Length; i++)
             {
-                ThisCake = ThisCake.Substring(0, 1).ToUpper() + ThisCake.Substring(1).ToLower();
-                if (ThisCake == cakes[i])
+                if (ThisCake.ToLower() == cakes[i].ToLower())
                {
                 Console.WriteLine($"{ThisCake} {prices[i]} сом доьхуш ю.");
                     return;
