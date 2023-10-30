@@ -14,22 +14,20 @@ namespace islam_part3
             string[] cakes = new string[] { "Тортик", "Тортище", "Торт95" };
             Console.WriteLine($"В наличии есть: {string.Join(", ", cakes)}");
             int[] prices = new int[] { 1507, 3600, 200 };
-            Dictionary<string, int> cakePrices = new Dictionary<string, int>();
-            for (int i = 0; i < cakes.Length; i++)
-            {
-                cakePrices.Add(cakes[i], prices[i]);
-            }
             Console.WriteLine("Муьлха торт еза?");
             string ThisCake = Console.ReadLine();
-            if (cakePrices.ContainsKey(ThisCake))
+            for (int i = 0; i < cakes.Length; i++)       
+            if (ThisCake == cakes[i])
             {
-                Console.WriteLine($"{ThisCake} {cakePrices[ThisCake]} сом доьхуш ю.");
+                Console.WriteLine($"{ThisCake} {prices[i]} сом доьхуш ю.");
+                    break;
             }
             else
             {
-                Console.WriteLine($"Тортиньо яц, нету, досвидания");
+                Console.WriteLine($"Иштта торт яц");
             }
-        }
+            
         }
     }
+}
 
