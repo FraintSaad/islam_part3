@@ -11,9 +11,9 @@ namespace islam_part3
     {
         public static void Start()
         {
-            string[] cakes = new string[] { "Тортик", "Тортище", "Торт95", "тоРТило"};
+            string[] cakes = new string[] { "Тортик", "Тортище", "Торт95"};
             Console.WriteLine($"В наличии есть: {string.Join(", ", cakes)}");
-            int[] prices = new int[] { 1507, 3600, 200, 400 };
+            int[] prices = new int[] { 1507, 3600, 200 };
             Console.WriteLine("Муьлха торт еза?");
             string ThisCake = Console.ReadLine();
             for (int i = 0; i < cakes.Length; i++)
