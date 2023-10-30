@@ -16,17 +16,17 @@ namespace islam_part3
             int[] prices = new int[] { 1507, 3600, 200 };
             Console.WriteLine("Муьлха торт еза?");
             string ThisCake = Console.ReadLine();
-            for (int i = 0; i < cakes.Length; i++)       
-            if (ThisCake == cakes[i])
-            {
+            for (int i = 0; i < cakes.Length; i++)
+            {    
+               if (ThisCake == cakes[i])
+               {
                 Console.WriteLine($"{ThisCake} {prices[i]} сом доьхуш ю.");
-                    break;
+                    return;
+               }
             }
-            else
-            {
-                Console.WriteLine($"Иштта торт яц");
-            }
-            
+            Console.WriteLine($"{ThisCake} ц1е йолу торт яц");
+
+
         }
     }
 }
