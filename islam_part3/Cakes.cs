@@ -17,14 +17,17 @@ namespace islam_part3
             Console.WriteLine("Муьлха торт еза?");
             string ThisCake = Console.ReadLine();
             for (int i = 0; i < cakes.Length; i++)
-            {    
-               if (ThisCake == cakes[i])
+            {
+                ThisCake = ThisCake.Substring(0, 1).ToUpper() + ThisCake.Substring(1).ToLower();
+                if (ThisCake == cakes[i])
                {
                 Console.WriteLine($"{ThisCake} {prices[i]} сом доьхуш ю.");
                     return;
                }
             }
+           
             Console.WriteLine($"{ThisCake} ц1е йолу торт яц");
+            
 
 
         }
