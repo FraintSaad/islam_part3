@@ -13,11 +13,11 @@ namespace islam_part3
             Console.WriteLine("Введите сумму вклада:");
             double Ver=Convert.ToDouble(Console.ReadLine());
 
-            if (Ver < 100)
+            if (Ver <= 100)
             {
                 Ver += Ver * 0.05;
             }
-            if (Ver > 100 && Ver<200)
+            else if (Ver > 100 && Ver<200)
             {
                 Ver += Ver * 0.07;
             }
