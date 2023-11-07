@@ -6,7 +6,7 @@ namespace islam_part3
     {
         static void Main(string[] args)
         {
-            Cakes.Start();
+            ArrayInversion.Start();
         }
 
 
