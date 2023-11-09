@@ -6,7 +6,9 @@ namespace islam_part3
     {
         static void Main(string[] args)
         {
-            BankExercise1.Start();
+
+            ArrayInversion.Start();
+
         }
 
 
