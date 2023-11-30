@@ -11,12 +11,12 @@ namespace islam_part3
 
         public static void Start()
         {
+
             string[] positive = { "хороший", "замечательный", "понравился", "доволен" };
             string[] negative = { "плохой", "недоволен", "некачественный", "ужасный", "неприятно", "подвело" };
             int reviewsCount = 3;
             List<string> reviews = new List<string>();
-            Console.WriteLine("Введите три отзыва");
-    
+
             for (int i = 0; i < reviewsCount; i++)
             {
                 Console.Write($"Введите отзыв номер {i + 1}: ");
@@ -24,24 +24,40 @@ namespace islam_part3
 
                 AnalyzeSentiment(review);
             }
-           
-             void AnalyzeSentiment(string review)
-             {
+
+            void AnalyzeSentiment(string review)
+            {
                 string[] words = review.Split(" ");
-                foreach (var word in words)
+                bool isPositive = false;
+                bool isNegative = false;
+
+                foreach (var word in positive)
                 {
-                    if (positive.Contains(word))
+                    if (review.Contains(word))
                     {
-
-                        Console.WriteLine("Положительный отзыв");
+                        isPositive = true;
+                        break;
                     }
-                    else if (negative.Contains(word))
-                    {
-                        Console.WriteLine("Негативный отзыв");
-                    }
-
                 }
 
-             }
+                foreach (var word in negative)
+                {
+                    if (review.Contains(word))
+                    {
+                        isNegative = true;
+                        break;
+                    }
+                }
+                if (isPositive==true)
+                {
+                    Console.WriteLine("Отзыв положительный");
+                }
+                else if (isNegative==true)
+                {
+                    Console.WriteLine("Отзыв негативный");
+                }
+                else { Console.WriteLine("Отзыв нейтральный"); }
+            }
         }
-}   }
+    } 
+}
