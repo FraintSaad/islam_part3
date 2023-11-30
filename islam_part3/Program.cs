@@ -8,9 +8,5 @@ namespace islam_part3
         {
             ReviewAnalyzer.Start();
         }
-
-
-
-        
     }
 }
